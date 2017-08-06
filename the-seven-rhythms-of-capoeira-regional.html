@@ -42,31 +42,50 @@
             <div class="box">
             
 			    <div class="well well-sm">
-			        <strong><a href="index.html">Home</a> > Contact</strong>
+			        <strong><a href="index.html">Home</a> > <a href="blog.html">Blog</a> > The 7 Rhythms of Capoeira Regional</strong>
 			    </div> 
 		                
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Contact
-                        <strong>Capoeira Costa Rica</strong>
+                    <h2 class="intro-text text-center">
+                        <strong>The 7 Rhythms of Capoeira Regional</strong>
                     </h2>
                     <hr>
                 </div>
                 <div class="col-md-8">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15716.894743118004!2d-84.1307601843053!3d9.998373117553612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0faddaded66bd%3A0x2527e99d1a1e0bdf!2sHeredia!5e0!3m2!1spt-BR!2scr!4v1496590690207"></iframe>
+                    <img class="img-responsive img-border img-left" src="img/blog/the-seven-rhythms-of-capoeira-regional.jpg" alt="Regional Berimbau"/>
                 </div>
                 <div class="col-md-4">
-                    <p>Whatsapp:
-                        <strong>(506) 8429-6864</strong>
-                    </p>
-                    <p>Email:
-                        <strong><a href="mailto:sabemuchodulces@gmail.com">costaricacapoeira@gmail.com</a></strong>
-                    </p>
-                    <p>Address:
-                        <strong>Heredia
-                            <br>Costa Rica</strong>
-                    </p>
+						<br/><br/>
+						Capoeira music differentiates Capoeira from other martial arts. Music is a very important aspect in Capoeira.
+						<br/><br/>The musical variations of the berimbau are the various rhythms performed by the player to define the type of play that will be done on the "roda". A good capoeirista should, or rather, have an obligation, to know the greatest number of rhythms, as well as the meaning and type of game practiced in each of these rhythms.
+						 
+						<br/><br/>In Capoeira Regional it has only one berimbau and two tambourines(pandeiros), and the litanies(ladainhas) are usually short. And the seven rhythms created by Master Bimba that vary the games.
+						The seven rhythms of regional capoeira:
+						<br/><br/><strong>IÚNA:</strong> This rhythm was based on the song of the bird Iúna. It is a more in and continuous game, 
+							executing movements of "flourish"(floreio), and only the masters and formed can participate in that game. 
+							During their performance they use only the instruments, without any hand clapping and they do not sing.
+							The Iuna rhythm is composed of two parts, one is the male wooing sounds and the second is the female response.
+						<br/><br/><strong>AMAZONAS:</strong> It's the festive rhythm, used to greet visitors from other places and their respective students. 
+							It is used in baptisms and gatherings. Some people say that Mestre Bimba created the Amazonas rhythm for a women.
+						<br/><br/><strong>CAVALARIA:</strong> It's the warning or alert tone. Its origin goes back to the time of the prohibition of capoeira, 
+							when it was used to denounce the presence of the assembled police, of the so-called cavalry squadron. A capoeirista put himself 
+							in a strategic place and, when he saw the police, he imitated the horses in the berimbau and the wheel turned into "innocent joke".
+							Cavalaria is an old rhythm and is trying to imitate galloping horses because in that times the police came riding on horses.
+						<br/><br/><strong>SANTA MARIA:</strong> It is usually used only in presentations and it is related to the game of knife, knife or machete.
+							 The Santa Maria rhythm was played to warn the capoeiristas that there is someone with a knife in the roda.
+						<br/><br/><strong>BENGUELA:</strong> It is a slow game, loose, flowery and quite disputed, that was introduced to be able to play with 
+							the angoleiros. This rhythm has no  hand claping and no singing, it can be played in the beginning of the roda to warm up, 
+							Mestre Bimba also used it to calm the Roda if it got to tough.
+						<br/><br/><strong>IDALINA:</strong> In this rhythm there is no characteristic type of game clearly defined, being that sometimes 
+							prevails in the "performance" of the players certain theatricality that refers to the love conquest. Mestre Bimba usually played Idalina 
+							at trainings and unofficial Rodas.
+						<br/><br/><strong>SÃO BENTO GRANDE DE BIMBA:</strong> The most common Berimbau rhythm in the Capoeira Regional. This game requires to be played 
+							more up (body positioning) than lower, being fast with explosive and traumatic blows.
+
+
+
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -135,115 +154,5 @@
 
 </body>
 
-
-<script>
-	var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"];
-	var CLIENT_ID = '22754000519-7itfeulnjf15j3e79r9rnfo9h4vtomdr.apps.googleusercontent.com';
-	var SCOPES = ['https://mail.google.com/', 'https://www.googleapis.com/auth/gmail.send', 'https://www.googleapis.com/auth/gmail.modify', 'https://www.googleapis.com/auth/gmail.labels'];
-
-      function handleClientLoad() {
-        gapi.load('client:auth2', initClient);
-      }
-
-
-	function handleAuthResult(authResult) {
-		if (authResult && !authResult.error) {
-			loadGmailApi();
-		}
-	}
-
-
-     function initClient() {
-        gapi.client.init({
-          discoveryDocs: DISCOVERY_DOCS,
-          clientId: CLIENT_ID,
-          scope: SCOPES
-        }).then(function () {
-          // Listen for sign-in state changes.
-          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
-          // Handle the initial sign-in state.
-          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-          authorizeButton.onclick = handleAuthClick;
-          signoutButton.onclick = handleSignoutClick;
-        });
-      }	
-
-	function loadGmailApi() {
-		gapi.client.load('gmail', 'v1', function() {
-			console.log("Loaded GMail API");
-		});
-	}
-
-	function sendEmail() {
-		var content     = 'HELLO';
-		// I have an email account on GMail.  Lets call it 'theSenderEmail@gmail.com'
-		var sender      = 'theSenderEmail@gmail.com';
-		// And an email account on Hotmail.  Lets call it 'theReceiverEmail@gmail.com'\
-		// Note: I tried several 'receiver' email accounts, including one on GMail.  None received the email.
-		var receiver    = 'sabemuchodulces@gmail.com';
-		var to          = 'To: '   +receiver;
-		var from        = 'From: ' +sender;
-		var subject     = 'Subject: ' +'Contacto Sabe Mucho';
-		var contentType = 'Content-Type: text/plain; charset=utf-8';
-		var mime        = 'MIME-Version: 1.0';
-
-		var message = "";
-		message +=   to             +"\r\n";
-		message +=   from           +"\r\n";
-		message +=   subject        +"\r\n";
-		message +=   contentType    +"\r\n";
-		message +=   mime           +"\r\n";
-		message +=    "\r\n"        + content;
-
-		sendMessage(message, receiver, function (response) {                            
-									{
-										
-										alert(response); 
-									}
-									//alert(response)
-							
-							
-							
-            });
-		
-	}
-
-	function sendMessage(message, receiver, callback) {
-		//var headers = getClientRequestHeaders();
-		var path = "gmail/v1/users/me/messages/send?key=" + CLIENT_ID;
-		//var base64EncodedEmail = btoa(message).replace(/\+/g, '-').replace(/\//g, '_');
-		
-		alert(window.btoa(message).replace(/\+/g, '-').replace(/\//g, '_'));
-		
-		var sendRequest = gapi.client.gmail.users.messages.send({
-          'userId': CLIENT_ID,
-          'resource': {
-            'raw': window.btoa(message).replace(/\+/g, '-').replace(/\//g, '_')
-          }
-        });
-        sendRequest.execute(callback);
-
-	}
-	
-	
-
-	var t = null;
-	function getClientRequestHeaders() {
-		if(!t) t = gapi.auth.getToken();
-		gapi.auth.setToken({token: t['access_token']});
-		var a = "Bearer " + t["access_token"];
-		return {
-			"Authorization": a,
-			"X-JavaScript-User-Agent": "Google APIs Explorer"
-		};
-	}
-
-</script>
-
-    <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
 
 </html>
